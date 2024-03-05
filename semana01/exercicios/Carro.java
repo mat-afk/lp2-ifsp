@@ -58,7 +58,7 @@ public class Carro extends Veiculo {
         }
 
         if(obj == null) {
-            return false
+            return false;
         }
 
         if(getClass() != obj.getClass()) {
@@ -69,7 +69,7 @@ public class Carro extends Veiculo {
 
         if(this.marca == null) {
             if(other.marca != null) {
-                return false
+                return false;
             }
         }
         else if(!this.marca.equals(other.marca)) {
@@ -78,7 +78,7 @@ public class Carro extends Veiculo {
 
         if(this.ano == null) {
             if(other.ano != null) {
-                return false
+                return false;
             }
         }
         else if(!this.ano.equals(other.ano)) {
@@ -91,7 +91,7 @@ public class Carro extends Veiculo {
             }
         }
         else if(!this.modelo.equals(other.modelo)) {
-            return false
+            return false;
         }
 
         if(this.placa == null) {
@@ -100,7 +100,7 @@ public class Carro extends Veiculo {
             }
         }
         else if(!this.placa.equals(other.placa)) {
-            return false
+            return false;
         }
 
         return true;
