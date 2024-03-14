@@ -1,0 +1,22 @@
+4. Os principais métodos da interface Collection são: add, remove, size, contains, clear, addAll, removeAll, constainsAll, isEmpty.
+A diferença entre ArrayList e LinkedList é que ArrayList é mais rápida para buscar elementos, enquanto a LinkedList é mais rápida para inseri-los e remove-los.
+
+5. 
+sort: método que ordena os elementos de uma coleção.
+binarySearch: procura um dado elemento usando o algoritmo de busca binária
+reverse: inverte a ordem dos elementos de uma coleção
+shuffle: reordena a coleção randomicamente
+fill: substitui todos os elementos da coleção por outros dados
+copy: copia todos os elementos de uma coleção para outra dada.
+
+6. 
+A interface List armazena elementos na ordem de inserção, podendo duplicatas. 
+A interface Set não garante ordem de entrada e não permite objetos repetidos.
+A interface Queue permite a criação de pilhas e filhas de prioridade. 
+Nas pilhas, o último elemento a ser colocado é o primeiro a ser retirado.
+Nas filas, o primeiro elemento a ser colocado é o primeiro a ser retirado.
+
+7.
+No HashSet, o acesso aos dados é rápido, mas não é garantida a ordenação dos elementos.
+No TreeSet, o acesso é mais lento, mas os elementos são ordenados automaticamente.
+A LinkedHashSet implementa uma lista duplamente ligada baseado no HashSet, com ordenação baseada na ordem de inserção.

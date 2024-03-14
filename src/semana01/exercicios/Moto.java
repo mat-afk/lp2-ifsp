@@ -1,4 +1,4 @@
-package lp2;
+package semana01.exercicios;
 
 public class Moto extends Veiculo {
 
@@ -32,7 +32,7 @@ public class Moto extends Veiculo {
         final int prime = 31;
         int result = super.hashCode();
 
-        result = prime * result + ((cor == null) : 0 ? (cor.hashCode()));
+        result = prime * result + ((cor == null) ? 0 : (cor.hashCode()));
 
         return result;
     }
@@ -40,46 +40,24 @@ public class Moto extends Veiculo {
     @Override 
     public boolean equals(Object obj) {
 
-        if(this == obj) {
+        if (this == obj) 
             return true;
-        }
-
-        if(obj == null) {
-            return false
-        }
-
-        if(getClass() != obj.getClass()) {
+        if (obj == null) 
             return false;
-        }
+        if (!super.equals(obj)) 
+            return false;
+        if (getClass() != obj.getClass()) 
+            return false;
 
         Moto other = (Moto) obj;
 
-        if(this.marca == null) {
-            if(other.marca != null) {
-                return false
-            }
-        }
-        else if(!this.marca.equals(other.marca)) {
-            return false;
-        }
-
-        if(this.ano == null) {
-            if(other.ano != null) {
-                return false
-            }
-        }
-        else if(!this.ano.equals(other.ano)) {
-            return false;
-        }
-
-        if(this.cor == null) {
+        if (this.cor == null) {
             if(other.cor != null) {
-                return false
+                return false;
             }
         }
-        else if(!this.cor.equals(other.cor)) {
+        else if (!this.cor.equals(other.cor)) 
             return false;
-        }
 
         return true;
     }

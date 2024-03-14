@@ -1,4 +1,4 @@
-package lp2;
+package semana01.exercicios;
 
 public class Carro extends Veiculo {
 
@@ -44,8 +44,8 @@ public class Carro extends Veiculo {
         final int prime = 31;
         int result = super.hashCode();
 
-        result = prime * result + ((modelo == null) : 0 ? (modelo.hashCode()));
-        result = prime * result + ((placa == null) : 0 ? (placa.hashCode()));
+        result = prime * result + ((modelo == null) ? 0 : (modelo.hashCode()));
+        result = prime * result + ((placa == null) ? 0 : (placa.hashCode()));
 
         return result;
     }
@@ -53,55 +53,30 @@ public class Carro extends Veiculo {
     @Override 
     public boolean equals(Object obj) {
 
-        if(this == obj) {
+        if(this == obj) 
             return true;
-        }
-
-        if(obj == null) {
+        if(obj == null) 
             return false;
-        }
-
-        if(getClass() != obj.getClass()) {
+        if (!super.equals(obj)) 
             return false;
-        }
+        if(getClass() != obj.getClass()) 
+            return false;
 
         Carro other = (Carro) obj;
 
-        if(this.marca == null) {
-            if(other.marca != null) {
-                return false;
-            }
-        }
-        else if(!this.marca.equals(other.marca)) {
-            return false;
-        }
-
-        if(this.ano == null) {
-            if(other.ano != null) {
-                return false;
-            }
-        }
-        else if(!this.ano.equals(other.ano)) {
-            return false;
-        }
-
         if(this.modelo == null) {
-            if(other.modelo != null) {
+            if(other.modelo != null) 
                 return false;
-            }
         }
-        else if(!this.modelo.equals(other.modelo)) {
+        else if(!this.modelo.equals(other.modelo)) 
             return false;
-        }
 
         if(this.placa == null) {
-            if(other.placa != null) {
+            if(other.placa != null) 
                 return false;
-            }
         }
-        else if(!this.placa.equals(other.placa)) {
+        else if(!this.placa.equals(other.placa)) 
             return false;
-        }
 
         return true;
     }

@@ -1,4 +1,4 @@
-package lp2;
+package semana01.exercicios;
 
 public class Veiculo {
 
@@ -41,8 +41,8 @@ public class Veiculo {
         final int prime = 31;
         int result = 1;
 
-        result = prime * result + ((marca == null) : 0 ? (marca.hashCode()));
-        result = prime * result + ((ano == null) : 0 ? (ano.hashCode()));
+        result = prime * result + ((marca == null) ? 0 : (marca.hashCode()));
+        result = prime * result + ((ano == null) ? 0 : (ano.hashCode()));
 
         return result;
     }
@@ -50,37 +50,28 @@ public class Veiculo {
     @Override 
     public boolean equals(Object obj) {
 
-        if(this == obj) {
+        if(this == obj) 
             return true;
-        }
-
-        if(obj == null) {
-            return false
-        }
-
-        if(getClass() != obj.getClass()) {
+        if(obj == null) 
             return false;
-        }
+        if(getClass() != obj.getClass()) 
+            return false;
 
         Veiculo other = (Veiculo) obj;
 
         if(this.marca == null) {
-            if(other.marca != null) {
-                return false
-            }
+            if(other.marca != null) 
+                return false;
         }
-        else if(!this.marca.equals(other.marca)) {
+        else if(!this.marca.equals(other.marca)) 
             return false;
-        }
 
         if(this.ano == null) {
-            if(other.ano != null) {
-                return false
-            }
+            if(other.ano != null) 
+                return false;
         }
-        else if(!this.ano.equals(other.ano)) {
+        else if(!this.ano.equals(other.ano)) 
             return false;
-        }
 
         return true;
     }
