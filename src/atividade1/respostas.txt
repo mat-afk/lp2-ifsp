@@ -1,0 +1,29 @@
+3. 
+A interface List armazena elementos na ordem de inserção, permitindo duplicatas. 
+A interface Set não garante ordem de entrada e não permite objetos repetidos.
+No HashSet, o acesso aos dados é rápido, mas não é garantida a ordenação dos elementos.
+No TreeSet, o acesso é mais lento, mas os elementos são ordenados automaticamente.
+A LinkedHashSet implementa uma lista duplamente ligada baseado no HashSet, com ordenação baseada na ordem de inserção.
+
+4. 
+
+I. static <T extends Comparable<? super T>> void sort(List<T> list)
+II. static <T> void sort(List<T> list, Comparator<? super T> c)
+Ordena os elementos em uma lista em ordem crescente (I) ou usando um comparador especificado (II)
+
+I. static <T> int binarySearch(List<? extends T> list, T key, Comparator<? super T> c)
+II. static <T> int binarySearch(List<? extends Comparable<? super T>> list, T key)
+Procura na lista dada um determinado objeto usando o algoritmo de busca binária, usando um dado comparador (I) ou não (II)
+
+static void reverse(List<?> list)
+Inverte a ordem dos elementos em uma lista
+
+I. static void shuffle(List<?> list)
+II. static void shuffle(List<?> list, Random rnd)
+Reordena os elementos de uma lista com uma randomização padrão (I) ou com um dado objeto fonte de randomização (II)
+
+static <T> void fill(List<? super T> list, T obj)
+Preenche todos os elementos de uma lista com um objeto especificado
+
+static <T> void copy(List<? super T> dest, List<? extends T> src)
+Copia todos os elementos de uma lista fonte (src) para uma lista destino (dest)
