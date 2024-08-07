@@ -1,4 +1,4 @@
-package semana03.exercicios;
+package bimestre1.semana03.exercicios;
 
 import java.util.Comparator;
 

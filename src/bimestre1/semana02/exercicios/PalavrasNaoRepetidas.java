@@ -1,4 +1,4 @@
-package semana02.exercicios;
+package bimestre1.semana02.exercicios;
 
 import java.util.HashSet;
 import java.util.Scanner;

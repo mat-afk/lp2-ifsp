@@ -1,16 +1,18 @@
-package semana03.exercicios;
+package bimestre1.semana03.exercicios;
 
 import java.util.ArrayList;
 import java.util.Collections;
 
 public class Main {
     public static void main(String[] args) {
-        
+
         Usuario u1 = new Usuario("Luiz Fernando Quirino");
 
         Post p1 = new Post("Olá, mundo");
         Post p2 = new Post(30, 03, 2024, 16, 53, 3, "Há um tipo de beleza nessa cidade quase cinza");
-        Post p3 = new Post("Doguinho das vitamina D passando na timeline pra te lembrar de tomar sol. #nofilter #sunnyday #dog #instadog", "cachorro-sol.png", "cachorro");
+        Post p3 = new Post(
+                "Doguinho das vitamina D passando na timeline pra te lembrar de tomar sol. #nofilter #sunnyday #dog #instadog",
+                "cachorro-sol.png", "cachorro");
 
         u1.post(p1);
         u1.post(p2);

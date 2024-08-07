@@ -1,4 +1,4 @@
-package semana03.exercicios;
+package bimestre1.semana03.exercicios;
 
 public class Imagem {
     private String arquivo;
@@ -64,7 +64,7 @@ public class Imagem {
                 return false;
         } else if (!descricao.equals(other.descricao))
             return false;
-            
+
         return true;
     }
 

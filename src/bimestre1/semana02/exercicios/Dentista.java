@@ -1,7 +1,7 @@
-package semana02.exercicios;
+package bimestre1.semana02.exercicios;
 
 public class Dentista {
-    
+
     private String nome;
     private Integer idade;
 
@@ -26,7 +26,7 @@ public class Dentista {
     public Integer getIdade() {
         return idade;
     }
-    
+
     public void setIdade(Integer idade) {
         this.idade = idade;
     }

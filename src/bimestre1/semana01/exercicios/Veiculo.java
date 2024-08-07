@@ -1,4 +1,4 @@
-package semana01.exercicios;
+package bimestre1.semana01.exercicios;
 
 public class Veiculo {
 
@@ -47,30 +47,28 @@ public class Veiculo {
         return result;
     }
 
-    @Override 
+    @Override
     public boolean equals(Object obj) {
 
-        if(this == obj) 
+        if (this == obj)
             return true;
-        if(obj == null) 
+        if (obj == null)
             return false;
-        if(getClass() != obj.getClass()) 
+        if (getClass() != obj.getClass())
             return false;
 
         Veiculo other = (Veiculo) obj;
 
-        if(this.marca == null) {
-            if(other.marca != null) 
+        if (this.marca == null) {
+            if (other.marca != null)
                 return false;
-        }
-        else if(!this.marca.equals(other.marca)) 
+        } else if (!this.marca.equals(other.marca))
             return false;
 
-        if(this.ano == null) {
-            if(other.ano != null) 
+        if (this.ano == null) {
+            if (other.ano != null)
                 return false;
-        }
-        else if(!this.ano.equals(other.ano)) 
+        } else if (!this.ano.equals(other.ano))
             return false;
 
         return true;

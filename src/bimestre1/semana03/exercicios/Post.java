@@ -1,4 +1,4 @@
-package semana03.exercicios;
+package bimestre1.semana03.exercicios;
 
 import java.time.LocalDateTime;
 
@@ -12,7 +12,8 @@ public class Post implements Comparable<Post> {
         this.texto = "";
     }
 
-    public Post(int dia, int mes, int ano, int hora, int minuto, int segundo, String texto, String arquivo, String descricao) {
+    public Post(int dia, int mes, int ano, int hora, int minuto, int segundo, String texto, String arquivo,
+            String descricao) {
         this.dataHorario = LocalDateTime.of(ano, mes, dia, hora, minuto, segundo);
         this.texto = texto;
         this.imagem = new Imagem(arquivo, descricao);
@@ -101,7 +102,7 @@ public class Post implements Comparable<Post> {
                 return false;
         } else if (!imagem.equals(other.imagem))
             return false;
-            
+
         return true;
     }
 

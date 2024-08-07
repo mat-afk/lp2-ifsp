@@ -1,19 +1,28 @@
-package atividade1;
+package bimestre1.semana03.exercicios;
 
-import java.time.LocalDate;
+import java.util.ArrayList;
 
-public class Pessoa {
+public class Usuario {
     private String nome;
-    private LocalDate idade;
+    private ArrayList<Post> lista;
 
-    public Pessoa() {
+    public Usuario() {
         this.nome = "";
-        this.idade = LocalDate.now();
+        this.lista = new ArrayList<>();
     }
 
-    public Pessoa(String nome, int dia, int mes, int ano) {
+    public Usuario(String nome, ArrayList<Post> lista) {
         this.nome = nome;
-        this.idade = LocalDate.of(ano, mes, dia);
+        this.lista = lista;
+    }
+
+    public Usuario(String nome) {
+        this.nome = nome;
+        this.lista = new ArrayList<>();
+    }
+
+    public void post(Post post) {
+        lista.add(post);
     }
 
     public String getNome() {
@@ -24,12 +33,12 @@ public class Pessoa {
         this.nome = nome;
     }
 
-    public LocalDate getIdade() {
-        return idade;
+    public ArrayList<Post> getLista() {
+        return lista;
     }
 
-    public void setIdade(LocalDate idade) {
-        this.idade = idade;
+    public void setLista(ArrayList<Post> lista) {
+        this.lista = lista;
     }
 
     @Override
@@ -38,7 +47,7 @@ public class Pessoa {
         int result = 1;
 
         result = prime * result + ((nome == null) ? 0 : nome.hashCode());
-        result = prime * result + ((idade == null) ? 0 : idade.hashCode());
+        result = prime * result + ((lista == null) ? 0 : lista.hashCode());
 
         return result;
     }
@@ -51,8 +60,8 @@ public class Pessoa {
             return false;
         if (getClass() != obj.getClass())
             return false;
-            
-        Pessoa other = (Pessoa) obj;
+
+        Usuario other = (Usuario) obj;
 
         if (nome == null) {
             if (other.nome != null)
@@ -60,10 +69,10 @@ public class Pessoa {
         } else if (!nome.equals(other.nome))
             return false;
 
-        if (idade == null) {
-            if (other.idade != null)
+        if (lista == null) {
+            if (other.lista != null)
                 return false;
-        } else if (!idade.equals(other.idade))
+        } else if (!lista.equals(other.lista))
             return false;
 
         return true;
@@ -71,6 +80,6 @@ public class Pessoa {
 
     @Override
     public String toString() {
-        return "Pessoa [nome=" + nome + ", idade=" + idade + "]";
-    } 
+        return "Usuario [nome=" + nome + ", lista=" + lista + "]";
+    }
 }

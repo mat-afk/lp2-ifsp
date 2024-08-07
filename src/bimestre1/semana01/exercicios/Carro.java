@@ -1,4 +1,4 @@
-package semana01.exercicios;
+package bimestre1.semana01.exercicios;
 
 public class Carro extends Veiculo {
 
@@ -50,32 +50,30 @@ public class Carro extends Veiculo {
         return result;
     }
 
-    @Override 
+    @Override
     public boolean equals(Object obj) {
 
-        if(this == obj) 
+        if (this == obj)
             return true;
-        if(obj == null) 
+        if (obj == null)
             return false;
-        if (!super.equals(obj)) 
+        if (!super.equals(obj))
             return false;
-        if(getClass() != obj.getClass()) 
+        if (getClass() != obj.getClass())
             return false;
 
         Carro other = (Carro) obj;
 
-        if(this.modelo == null) {
-            if(other.modelo != null) 
+        if (this.modelo == null) {
+            if (other.modelo != null)
                 return false;
-        }
-        else if(!this.modelo.equals(other.modelo)) 
+        } else if (!this.modelo.equals(other.modelo))
             return false;
 
-        if(this.placa == null) {
-            if(other.placa != null) 
+        if (this.placa == null) {
+            if (other.placa != null)
                 return false;
-        }
-        else if(!this.placa.equals(other.placa)) 
+        } else if (!this.placa.equals(other.placa))
             return false;
 
         return true;

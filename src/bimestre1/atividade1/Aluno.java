@@ -1,4 +1,4 @@
-package atividade1;
+package bimestre1.atividade1;
 
 public class Aluno extends Pessoa {
     private String prontuario;
@@ -47,7 +47,7 @@ public class Aluno extends Pessoa {
                 return false;
         } else if (!prontuario.equals(other.prontuario))
             return false;
-            
+
         return true;
     }
 

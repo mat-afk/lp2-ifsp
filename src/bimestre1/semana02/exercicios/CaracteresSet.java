@@ -1,4 +1,4 @@
-package semana02.exercicios;
+package bimestre1.semana02.exercicios;
 
 import java.util.HashSet;
 import java.util.Scanner;
@@ -6,9 +6,9 @@ import java.util.Set;
 import java.util.TreeSet;
 
 public class CaracteresSet {
-    
+
     public static void main(String[] args) {
-        
+
         Scanner scan = new Scanner(System.in);
 
         System.out.printf("Digite uma string: ");

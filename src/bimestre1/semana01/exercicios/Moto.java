@@ -1,4 +1,4 @@
-package semana01.exercicios;
+package bimestre1.semana01.exercicios;
 
 public class Moto extends Veiculo {
 
@@ -37,26 +37,25 @@ public class Moto extends Veiculo {
         return result;
     }
 
-    @Override 
+    @Override
     public boolean equals(Object obj) {
 
-        if (this == obj) 
+        if (this == obj)
             return true;
-        if (obj == null) 
+        if (obj == null)
             return false;
-        if (!super.equals(obj)) 
+        if (!super.equals(obj))
             return false;
-        if (getClass() != obj.getClass()) 
+        if (getClass() != obj.getClass())
             return false;
 
         Moto other = (Moto) obj;
 
         if (this.cor == null) {
-            if(other.cor != null) {
+            if (other.cor != null) {
                 return false;
             }
-        }
-        else if (!this.cor.equals(other.cor)) 
+        } else if (!this.cor.equals(other.cor))
             return false;
 
         return true;

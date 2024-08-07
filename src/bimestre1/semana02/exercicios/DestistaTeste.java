@@ -1,9 +1,9 @@
-package semana02.exercicios;
+package bimestre1.semana02.exercicios;
 
 public class DestistaTeste {
 
     public static void main(String[] args) {
-        
+
         Dentista d1 = new Dentista();
         Dentista d2 = new Dentista("Luiz Quirino Postingel", 38);
         Dentista d3 = new Dentista("Luiz Quirino Postingel", 38);

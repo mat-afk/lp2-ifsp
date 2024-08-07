@@ -1,4 +1,4 @@
-package atividade1;
+package bimestre1.atividade1;
 
 import java.util.Comparator;
 
