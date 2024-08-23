@@ -29,7 +29,7 @@ public class Main {
             }
         }
         catch (IOException err) {
-            System.out.println(err.getMessage());
+            err.printStackTrace();
         }
         finally {
             try {
@@ -38,7 +38,7 @@ public class Main {
                 }
             }
             catch (IOException err) {
-                System.out.println(err.getMessage());
+                err.printStackTrace();
             }
         }
 
