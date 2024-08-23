@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class Main {
 
-    private static final String PATH = "src/bimestre2/atividade/ex3/";
+    private static final String SOURCE_PATH = "src/bimestre2/atividade/ex3/";
 
     public static void main(String[] args) {
 
@@ -15,7 +15,7 @@ public class Main {
         FileOutputStream out = null;
 
         try {
-            out = new FileOutputStream(PATH + "num.txt");
+            out = new FileOutputStream(SOURCE_PATH + "num.txt");
 
             System.out.println("Digite 10 números a serem gravados no arquivo:");
             byte[] space = " ".getBytes();
@@ -33,7 +33,9 @@ public class Main {
         }
         finally {
             try {
-                out.close();
+                if (out != null) {
+                    out.close();
+                }
             }
             catch (IOException err) {
                 System.out.println(err.getMessage());

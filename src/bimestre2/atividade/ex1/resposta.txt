@@ -1,0 +1,23 @@
+A classe abstrata Reader permite ler fluxos de caracteres, enquanto a classe abstrata Writer permite escrevê-los. 
+
+Métodos da classe FileReader:
+
+- public int read()
+Lê um caractere de um arquivo, representado por um inteiro. Retorna -1 caso chegue no fim do arquivo;
+
+- public int read(char[] cbuf)
+Lê os caracteres de um arquivo para um dado array do tipo char (cbuf), populando-o. Retorna o número de caracteres lidos.
+
+- public long skip(long n)
+Pula, ou ignora, um dado número de caracteres (n) no arquivo, posicionando o ponteiro de leitura após eles. Retorna o número de caracteres efetivamente pulados.
+
+Métodos da classe FileWriter:
+
+- public Writer append(char c)
+Adiciona um dado caractere (c) ao objeto writer, não escrevendo-o, ainda, em um arquivo. Retorna o objeto writer acrescentado.
+
+- public void write(int c)
+Escreve um único dado caractere (c), recebido em formato de inteiro, no arquivo.
+
+- public void write(String str) 
+Escreve uma dada string (str) no arquivo.

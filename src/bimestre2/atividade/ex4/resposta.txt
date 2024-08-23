@@ -1,0 +1,12 @@
+A interface Map permite a criação de objetos que mapeiam chaves para valores, sem chaves duplicadas. Ela é duplamente parametrizada com o tipo das chaves, e o tipo dos valores. Ela é implementada direta ou indiretamente por classes como HashMap e TreeMap.
+
+Métodos da classe HashMap:
+
+- public V put(K key, V value)
+Associa a chave especificada (key), do tipo parametrizado K, a um valor (value), do tipo também parametrizado V. Retorna o valor anteriormente associado à chave, ou null caso o mapeamento ainda não tenha sido feito.
+
+- public V get(K key) 
+Retorna o valor mapeado pela chave (key) especificada, ou null caso ela não esteja mapeada a nenhum valor.
+
+- public Set<K> keySet()
+Retorna um objeto Set<K>, com K sendo o tipo parametrizado das chaves, com as chaves do mapa.

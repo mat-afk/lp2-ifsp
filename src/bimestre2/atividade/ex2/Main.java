@@ -2,13 +2,12 @@ package bimestre2.atividade.ex2;
 
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.HashSet;
 import java.util.Scanner;
 import java.util.Set;
 
 public class Main {
 
-    private static final String PATH = "src/bimestre2/atividade/ex2/";
+    private static final String SOURCE_PATH = "src/bimestre2/atividade/ex2/";
 
     public static void main(String[] args) {
 
@@ -24,37 +23,34 @@ public class Main {
         FileWriter writerConsoantes = null;
 
         try {
-            writerVogais = new FileWriter(PATH + "vogais.txt");
-            writerConsoantes = new FileWriter(PATH + "consoantes.txt");
-
-            Set<String> vogaisInMensagem = new HashSet<>();
-            Set<String> consoantesInMensagem = new HashSet<>();
+            writerVogais = new FileWriter(SOURCE_PATH + "vogais.txt");
+            writerConsoantes = new FileWriter(SOURCE_PATH + "consoantes.txt");
             
             for (String letra : mensagem.split("")) {
                 if (invalidCharacters.contains(letra)) {
                     continue;
                 }
 
-                letra = letra.toLowerCase();
-
                 if (vogais.contains(letra.toLowerCase())) {
-                    vogaisInMensagem.add(letra);
+                    writerVogais.write(letra + " ");
                 }
                 else {
-                    consoantesInMensagem.add(letra);
+                    writerConsoantes.write(letra + " ");
                 }
             }
-
-            writerVogais.write(String.join(" ", vogaisInMensagem));
-            writerConsoantes.write(String.join(" ", consoantesInMensagem));
         }
         catch (IOException err) {
             System.out.println(err.getMessage());
         }
         finally {
             try {
-                writerVogais.close();
-                writerConsoantes.close();
+                if (writerVogais != null) {
+                    writerVogais.close();
+                }
+                    
+                if (writerConsoantes != null) {
+                    writerConsoantes.close();
+                }
             }
             catch (IOException err) {
                 System.out.println(err.getMessage());
