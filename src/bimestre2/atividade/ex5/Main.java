@@ -1,13 +1,12 @@
 package bimestre2.atividade.ex5;
 
 import java.util.HashMap;
-import java.util.Map;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
         
-        Map<String, String> mapa = new HashMap<>();
+        HashMap<String, String> mapa = new HashMap<>();
         mapa.put("Bernardo", "Professor");
         mapa.put("Mateus", "Aluno");
         mapa.put("Marino", "Aluno");
