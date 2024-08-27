@@ -18,14 +18,14 @@ public class Main {
             out = new FileOutputStream(SOURCE_PATH + "num.txt");
 
             System.out.println("Digite 10 números a serem gravados no arquivo:");
-            byte[] space = " ".getBytes();
 
+            byte[] spaceBytes = " ".getBytes();
             for (int i = 0; i < 10; i++) {
                 Integer num = scanner.nextInt();
 
                 byte[] numInBytes = num.toString().getBytes();
                 out.write(numInBytes);
-                out.write(space);
+                out.write(spaceBytes);
             }
         }
         catch (IOException err) {

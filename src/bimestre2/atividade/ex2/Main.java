@@ -27,10 +27,8 @@ public class Main {
             writerConsoantes = new FileWriter(SOURCE_PATH + "consoantes.txt");
             
             for (String letra : mensagem.split("")) {
-                if (invalidCharacters.contains(letra)) {
-                    continue;
-                }
-
+                if (invalidCharacters.contains(letra)) continue;
+                
                 if (vogais.contains(letra.toLowerCase())) {
                     writerVogais.write(letra + " ");
                 }
